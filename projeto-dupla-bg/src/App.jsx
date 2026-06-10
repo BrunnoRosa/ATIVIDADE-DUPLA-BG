@@ -1,11 +1,13 @@
+import { useState } from 'react'
 import './App.css'
-import Header from './components/Header'
-
+import Footer from './components/Footer'
 
 function App() {
   return (
     <>
-      <h1>Atividade em Dupla - Bruno & Geovane</h1>
+    <h1>Atividade em Dupla - Bruno & Geovane</h1>  
+    <Footer/>  
+    
     </>
   )
 }
