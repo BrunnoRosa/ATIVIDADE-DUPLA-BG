@@ -1,6 +1,7 @@
 import PageHome from './pages/PageHome'
 import Servicos from './pages/Servicos'
 import Produtos from './pages/Produtos'
+import SobreNos from './pages/SobreNos'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<PageHome />}/>
           <Route path='/servicos' element={<Servicos />}/>
           <Route path='/produtos' element={<Produtos />}/>
+          <Route path='/sobre-nos' element={<SobreNos />}/>
         </Routes>
       </main>
         
