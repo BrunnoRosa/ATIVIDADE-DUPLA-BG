@@ -1,12 +1,13 @@
 import PageHome from './pages/PageHome'
+import Servicos from './pages/Servicos'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
     <Header />
       <main>
         <Routes>
@@ -18,7 +19,7 @@ function App() {
     <h1>Atividade em Dupla - Bruno & Geovane</h1>
     <Footer/>
     
-    </>
+    </BrowserRouter>
   )
 }
 
