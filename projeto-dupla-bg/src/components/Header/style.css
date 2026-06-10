@@ -1,0 +1,151 @@
+/* ==========================================================================
+   HEADER: UNIVERSO OTAKU 
+   ========================================================================== */
+
+:root {
+  /* Alinhado com as cores do Footer */
+  --color-bg-dark: #0a0b10;
+  --color-akatsuki: #ff1c1c;
+  --color-saiyan: #ffde00;
+  --color-chakra: #00f3ff;
+}
+
+.otaku-header {
+  background-color: var(--color-bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- LOGO --- */
+.header-logo {
+  text-decoration: none;
+}
+
+.header-logo h1 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.header-logo h1 span {
+  color: var(--color-akatsuki);
+  transition: all 0.3s ease;
+}
+
+/* Efeito Despertar/Super Saiyajin no Logo ao passar o mouse */
+.header-logo:hover h1 {
+  transform: scale(1.03);
+  text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+.header-logo:hover h1 span {
+  color: var(--color-saiyan);
+  text-shadow: 0 0 15px var(--color-saiyan);
+}
+
+/* --- NAVEGAÇÃO --- */
+.header-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: #a0a5b5;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover nos itens do Menu: Cor do Chakra */
+.nav-item:hover {
+  color: var(--color-chakra);
+}
+
+/* Link Ativo (Onde o usuário está navegando no momento) */
+.nav-item.active {
+  color: var(--color-saiyan);
+  text-shadow: 0 0 8px rgba(255, 222, 0, 0.4);
+}
+
+/* Detalhe Animado embaixo do Link Ativo (Efeito de corte/Chakra) */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-chakra);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-item.active::after {
+  background-color: var(--color-saiyan); /* Fica amarelo se estiver ativo */
+}
+
+/* --- LINHA DE ENERGIA INFERIOR --- */
+.header-energy-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--color-chakra), 
+    var(--color-akatsuki), 
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: pulse-energy 4s infinite ease-in-out;
+}
+
+@keyframes pulse-energy {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Menu Mobile)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 6%;
+  }
+
+  .header-nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    font-size: 0.85rem;
+  }
+}

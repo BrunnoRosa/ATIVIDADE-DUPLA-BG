@@ -1,29 +1,33 @@
 import './style.css'
-import { Link, NavLink } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
 
 export default function Header(){
     return(
-        <header>
-            <div>
-                <Link to="/" className='header-logo'>
-                <h1>MY ANIME LIST</h1>
-                </Link>
+        <header className="otaku-header">
+            <div className="header-container">
+                {/* Logo com efeito neon/mangá */}
+                <NavLink to="/" className='header-logo'>
+                    <h1>MY ANIME <span>LIST</span></h1>
+                </NavLink>
+                
+                {/* Menu de Navegação */}
+                <nav className="header-nav">
+                    <NavLink to="/" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+                        HOME
+                    </NavLink>
+                    <NavLink to="/produtos" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+                        PRODUTOS
+                    </NavLink>
+                    <NavLink to="/servicos" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+                        SERVIÇOS
+                    </NavLink>
+                    <NavLink to="/sobre-nos" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+                        SOBRE NÓS
+                    </NavLink>
+                </nav>
             </div>
-            <nav>
-                <NavLink>
-                    <Link to="/">HOME</Link>
-                </NavLink>
-                <NavLink>
-                    <Link to="/produtos">PRODUTOS</Link>
-                </NavLink>
-                <NavLink>
-                    <Link to="/servicos">SERVIÇOS</Link>
-                </NavLink>
-                <NavLink>
-                    <Link to="/sobre-nos">SOBRE NÓS</Link>
-                </NavLink>
-            </nav>
+            {/* Linha de energia inferior (combina com o footer) */}
+            <div className="header-energy-line"></div>
         </header>
     )
 }
