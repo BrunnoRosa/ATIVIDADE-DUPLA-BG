@@ -18,8 +18,8 @@ export default function Header(){
                     <NavLink to="/produtos" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
                         PRODUTOS
                     </NavLink>
-                    <NavLink to="/servicos" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
-                        SERVIÇOS
+                    <NavLink to="/pageregister" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+                        CADASTRO
                     </NavLink>
                     <NavLink to="/sobre-nos" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
                         SOBRE NÓS

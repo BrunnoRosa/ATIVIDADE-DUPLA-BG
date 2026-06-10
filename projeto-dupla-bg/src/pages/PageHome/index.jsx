@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 export default function PageHome() {
   return (
@@ -26,8 +27,10 @@ export default function PageHome() {
         {/* Botões de Chamada para Ação (CTA) */}
         <div className="hero-buttons">
           <button className="btn-primary">
+            <Link to="/cadastro" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
             <span className="btn-text">Iniciar Jornada</span>
             <div className="btn-energy"></div>
+            </Link>
           </button>
           <button className="btn-secondary">
             Ver Lançamentos
