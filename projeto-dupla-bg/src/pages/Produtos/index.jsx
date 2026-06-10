@@ -52,6 +52,7 @@ const animeData = [
 export default function Produtos() {
   return (
     <div className="container-page">
+      {/* CONTEÚDO ALTERADO: PRODUTOS / ANIME LIST */}
       <main className="content-products">
         <section className="anime-list-container">
           {animeData.map((anime, index) => (
@@ -86,5 +87,6 @@ export default function Produtos() {
           ))}
         </section>
       </main>
+    </div>
   );
 }
