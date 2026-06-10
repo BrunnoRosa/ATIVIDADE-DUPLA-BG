@@ -1,7 +1,9 @@
 import './style.css'
 
-export default function Servicos(){
+export default function SobreNos (){
     return(
-        <h1>Teste</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore facilis reiciendis sed dolorem necessitatibus explicabo rerum. Numquam accusantium recusandae totam distinctio, delectus culpa nostrum blanditiis, unde, corrupti dolorum consequatur consequuntur.
+        </p>
     )
 }
