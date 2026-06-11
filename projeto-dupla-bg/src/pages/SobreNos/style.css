@@ -1,0 +1,277 @@
+/* CONFIGURAÇÕES GERAIS E PALETA DE CORES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f1115;
+  color: #ffffff;
+}
+
+.container-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.highlight-red {
+  color: #ff1e27;
+}
+
+/* HEADER STYLE */
+.main-header {
+  background-color: #0f111a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom: 2px solid #14282f;
+}
+
+.main-header .logo {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.nav-menu a {
+  color: #a4a9b3;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+.nav-menu .active-link {
+  color: #f7ca18;
+  border-bottom: 2px solid #f7ca18;
+  padding-bottom: 5px;
+}
+
+/* CONTEÚDO PRINCIPAL - SOBRE NÓS */
+.content-about {
+  flex: 1;
+  background-color: #15161e;
+  padding: 40px 50px;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-section h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.title-section .subtitle {
+  font-size: 20px;
+  color: #00bcd4;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* CARD LAYOUT E GRID */
+.about-card {
+  background-color: #0f1115;
+  border-left: 5px solid #f7ca18; /* Detalhe em Amarelo para diferenciar da pág de produtos */
+  border-radius: 4px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* TEXTO INFORMATIVO */
+.about-info h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.about-info p {
+  color: #9da3af;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-info strong {
+  color: #ffffff;
+}
+
+.project-details {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #252830;
+}
+
+.project-details h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #f7ca18;
+}
+
+/* CITAÇÃO DO PROFESSOR */
+blockquote {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #15161e;
+  border-left: 4px solid #00bcd4;
+  color: #8a8f98;
+  font-style: italic;
+  border-radius: 0 4px 4px 0;
+}
+
+/* SIDEBAR DA DIREITA */
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.status-box {
+  background-color: #15161e;
+  padding: 25px;
+  border-radius: 6px;
+  border: 1px solid #252830;
+}
+
+.status-badge {
+  background-color: #ff1e27;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.status-box h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.status-box ul {
+  list-style: none;
+}
+
+.status-box ul li {
+  color: #9da3af;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #1f212a;
+  padding-bottom: 8px;
+}
+
+.status-box ul li strong {
+  color: #00bcd4;
+}
+
+.dev-names {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dev-tag {
+  background: #252830;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.dev-tag:hover {
+  border-color: #f7ca18;
+  background-color: #15161e;
+}
+
+/* FOOTER STYLE */
+.main-footer {
+  background-color: #0f1115;
+  padding: 40px 50px 20px 50px;
+  border-top: 2px solid #ff1e27;
+  position: relative;
+}
+
+.main-footer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ff1e27, #f7ca18, #00bcd4);
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-right: 40px;
+}
+
+.footer-quote {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quote-bar {
+  width: 4px;
+  height: 40px;
+  background-color: #00bcd4;
+}
+
+.footer-quote p {
+  color: #8a8f98;
+  font-style: italic;
+  font-size: 14px;
+  max-width: 500px;
+}
+
+.footer-bottom {
+  color: #5c626e;
+  font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-about {
+    padding: 20px;
+  }
+}
