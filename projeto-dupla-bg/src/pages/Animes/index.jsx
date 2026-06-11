@@ -53,7 +53,7 @@ const animeData = [
   }
 ];
 
-export default function Produtos() {
+export default function Anime() {
   return (
     <div className="container-page">
       {/* CONTEÚDO ALTERADO: PRODUTOS / ANIME LIST */}

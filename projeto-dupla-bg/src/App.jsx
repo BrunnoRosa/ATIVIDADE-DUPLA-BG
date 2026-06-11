@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import PageRegister from './pages/PageRegister'
+import Anime from './pages/Animes'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<PageHome />}/>
           <Route path='/pageregister' element={<PageRegister />}/>
-          <Route path='/produtos' element={<Produtos />}/>
+          <Route path='/animes' element={<Anime />}/>
           <Route path='/sobre-nos' element={<SobreNos />}/>
           <Route path='/cadastro' element={<PageRegister />}/>
         </Routes>
