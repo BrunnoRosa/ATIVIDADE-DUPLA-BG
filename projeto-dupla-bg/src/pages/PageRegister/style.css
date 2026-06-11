@@ -1,0 +1,218 @@
+/* ==========================================================================
+   REGISTER SECTION: FORMULÁRIO DE ALISTAMENTO OTAKU
+   ========================================================================== */
+
+:root {
+  --color-bg-dark: #0a0b10;
+  --color-card-bg: #12141c;       /* Fundo do card ligeiramente mais claro */
+  --color-akatsuki: #ff1c1c;
+  --color-saiyan: #ffde00;
+  --color-chakra: #00f3ff;
+  --color-text-light: #ffffff;
+  --color-text-muted: #717791;
+}
+
+.register-section {
+  background-color: var(--color-bg-dark);
+  padding: 80px 6%;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+}
+
+.register-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide a tela exatamente ao meio */
+  gap: 60px;
+  align-items: center;
+}
+
+/* --- COLUNA DA ESQUERDA: INFOS --- */
+.register-info {
+  animation: fadeInRight 1s ease-out;
+}
+
+.register-badge {
+  display: inline-block;
+  background-color: rgba(0, 243, 255, 0.1);
+  color: var(--color-chakra);
+  border: 1px solid var(--color-chakra);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.register-info-title {
+  color: var(--color-text-light);
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.register-info-title span {
+  color: var(--color-akatsuki);
+  text-shadow: 0 0 15px rgba(255, 28, 28, 0.3);
+}
+
+.register-info-text {
+  color: #b9bed3;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.register-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.perk-item {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- COLUNA DA DIREITA: CARD DO FORMULÁRIO --- */
+.register-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sutil efeito de linha de energia no topo do card do formulário */
+.register-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-akatsuki), var(--color-chakra));
+}
+
+.form-title {
+  color: var(--color-text-light);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* --- INPUTS E LABELS --- */
+.otaku-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  color: #a0a5b5;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-group input,
+.input-group select {
+  background-color: #1a1d29;
+  border: 2px solid #25293c;
+  color: var(--color-text-light);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Efeito Foco: O input ganha aura de Chakra ao ser clicado */
+.input-group input:focus,
+.input-group select:focus {
+  border-color: var(--color-chakra);
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+  background-color: #1e2233;
+}
+
+/* Estilização básica do select option */
+.input-group select option {
+  background-color: var(--color-card-bg);
+  color: var(--color-text-light);
+}
+
+/* --- BOTÃO DE SUBMIT --- */
+.btn-submit {
+  background: linear-gradient(90deg, var(--color-akatsuki), #cc1111);
+  color: var(--color-text-light);
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 28, 28, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 28, 28, 0.5);
+  letter-spacing: 1.5px; /* Abre levemente o texto no hover dando efeito dinâmico */
+}
+
+/* ==========================================================================
+   ANIMAÇÕES E RESPONSIVIDADE
+   ========================================================================== */
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Layout que vira uma única coluna em telas de tablets ou celulares */
+@media (max-width: 992px) {
+  .register-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .register-info {
+    text-align: center;
+  }
+  
+  .register-perks {
+    align-items: center;
+  }
+
+  .register-card {
+    padding: 30px 20px;
+  }
+}
