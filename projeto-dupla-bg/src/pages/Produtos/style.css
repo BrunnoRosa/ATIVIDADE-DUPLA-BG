@@ -60,7 +60,19 @@ body {
 /* CONTEÚDO PRINCIPAL E TÍTULOS */
 .content-products {
   flex: 1;
-  background-color: #15161e;
+  /* Criamos uma camada preta com 85% de opacidade (rgba 0,0,0,0.85) antes da imagem */
+  background-image: linear-gradient(
+      rgba(21, 22, 30, 0.88), 
+      rgba(21, 22, 30, 0.88)
+    ), 
+    url('/backgrounds/todosanimes.svg'); /* Caminho da imagem na pasta public */
+  
+  /* Garante que a imagem cubra toda a tela e fique fixa ao scrollar */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
   padding: 40px 50px;
 }
 
