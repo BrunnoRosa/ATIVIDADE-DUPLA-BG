@@ -1,6 +1,6 @@
 import PageHome from './pages/PageHome'
 import Servicos from './pages/PageRegister'
-import Produtos from './pages/Produtos'
+import Produtos from './pages/Animes'
 import SobreNos from './pages/SobreNos'
 import './App.css'
 import Footer from './components/Footer'
